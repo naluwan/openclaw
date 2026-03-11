@@ -1,0 +1,9 @@
+{
+  "agent": {
+    "model": "openai/gpt-4o-mini"
+  },
+  "gateway": {
+    "bind": "all",
+    "port": 10000
+  }
+}
