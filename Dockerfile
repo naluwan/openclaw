@@ -206,6 +206,9 @@ RUN --mount=type=cache,id=openclaw-bookworm-apt-cache,target=/var/cache/apt,shar
 RUN ln -sf /app/openclaw.mjs /usr/local/bin/openclaw \
  && chmod 755 /app/openclaw.mjs
 
+RUN mkdir -p /home/node/.openclaw && chown -R node:node /home/node/.openclaw
+COPY --chown=node:node openclaw.json /home/node/.openclaw/openclaw.json
+
 ENV NODE_ENV=production
 
 # Security hardening: Run as non-root user
