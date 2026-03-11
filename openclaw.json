@@ -7,7 +7,7 @@
     }
   },
   "gateway": {
-    "bind": "all",
+    "bind": "lan",
     "port": 10000
   }
 }
